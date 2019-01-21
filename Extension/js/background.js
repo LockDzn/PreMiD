@@ -1,4 +1,5 @@
-var allowedTabsStatic = ["www.youtube.com", "music.youtube.com", "soundcloud.com", "www.netflix.com", "www.aniflix.tv", "www.anime4you.one", "www.twitch.tv", "www.mixer.com", "branitube.org", "www.rabb.it", "www.crunchyroll.com"]
+var allowedTabsStatic = ["www.youtube.com", "music.youtube.com", "soundcloud.com", "www.netflix.com", "www.aniflix.tv", "www.anime4you.one", "www.twitch.tv", "mixer.com", "branitube.org", "www.rabb.it", "www.crunchyroll.com"]
+
 
 chrome.runtime.onInstalled.addListener(function(details) {
   switch(details.reason) {
@@ -72,7 +73,7 @@ async function tabPriority() {
     updateTabPriorityService("soundcloud", "soundcloud.com", options)
     updateTabPriorityService("netflix", "www.netflix.com", options)
     updateTabPriorityService("twitch", "www.twitch.tv", options)
-	updateTabPriorityService("mixer", "www.mixer.com", options)
+    updateTabPriorityService("mixer", "mixer.com", options)
     updateTabPriorityService("aniflix", "www.aniflix.tv", options)
     updateTabPriorityService("anime4you", "www.anime4you.one", options)
     updateTabPriorityService("rabbIt", "www.rabb.it", options)
@@ -179,7 +180,7 @@ async function updateOptions() {
 
     options[checkStorage("youtube", options)]
     options[checkStorage("twitch", options)]
-	options[checkStorage("mixer", options)]
+    options[checkStorage("mixer", options)]
     options[checkStorage("netflix", options)]
     options[checkStorage("rabbIt", options)]
 

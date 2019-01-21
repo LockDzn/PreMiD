@@ -36,6 +36,7 @@ $(document).ready(function() {
   systemStartupToggle = $('.toggleSystemStartup'),
   darkThemeToggle = $('.toggleDarkTheme'),
   crunchyrollToggle = $('.toggleCrunchyroll'),
+  branitubeToggle = $('.toggleBranitube'),
   aniflixToggle = $('.toggleAniflix'),
   tabPriorityToggle = $('.toggleTabPriority')
 
@@ -54,6 +55,7 @@ $(document).ready(function() {
   anime4YouToggle.change(tA4Y);
   crunchyrollToggle.change(tCR);
   aniflixToggle.change(tAF);
+  branitubeToggle.change(tBT);
   tabPriorityToggle.change(tTP);
 
   chrome.storage.sync.get(['options'], function(result) {
@@ -64,7 +66,7 @@ $(document).ready(function() {
       youtubeToggle.prop('checked', result.options.youtube)
       youtubeMusicToggle.prop('checked', result.options.youtubeMusic)
       twitchToggle.prop('checked', result.options.twitch)
-	  mixerToggle.prop('checked', result.options.mixer)
+	    mixerToggle.prop('checked', result.options.mixer)
       soundcloudToggle.prop('checked', result.options.soundcloud)
       netflixToggle.prop('checked', result.options.netflix)
       rabbitToggle.prop('checked', result.options.rabbIt)
@@ -76,6 +78,7 @@ $(document).ready(function() {
       systemStartupToggle.prop('checked', result.options.systemStartup)
       darkThemeToggle.prop('checked', result.options.darkTheme)
       aniflixToggle.prop('checked', result.options.aniflix)
+      branitubeToggle.prop('checked', result.options.branitube)
       crunchyrollToggle.prop('checked', result.options.crunchyroll)
       tabPriorityToggle.prop('checked', result.options.tabPriority)
     }
@@ -149,7 +152,10 @@ function tCR() {
   options.crunchyroll = !options.crunchyroll
   sync()
 }
-
+function tBT() {
+  options.branitube = !options.branitube
+  sync()
+}
 function tAF() {
   options.aniflix = !options.aniflix
   sync()

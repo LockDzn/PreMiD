@@ -61,14 +61,19 @@
       "matches": ["*://www.twitch.tv/*"],
       "js": ["js/presences/Video/Twitch.js"]
     },
-	{
-	  "matches": ["*://www.mixer.com/*"],
-	  "js": ["js/presences/Video/Mixer.js"]
-	},
+    {
+      "matches": ["*://mixer.com/*"],
+       "js": ["js/presences/Video/Mixer.js"]
+     },
     {
       "matches": ["*://www.rabb.it/*"],
       "js": ["js/presences/Video/Rabb.it.js"]
     },
+    {
+      "matches": ["*://branitube.org/*"],
+      "js": ["js/presences/Anime/Branitube.js"]
+    },
+    
     {
       "matches": ["*://www.crunchyroll.com/*"],
       "js": ["js/presences/Anime/Crunchyroll.js"]
