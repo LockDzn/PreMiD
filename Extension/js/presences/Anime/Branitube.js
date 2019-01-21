@@ -22,7 +22,7 @@ async function updateData() {
 
   //* If page has all required propertys
   if(playback) {
-	 if($('.nomeAnme').html().match(new RegExp(" Dublado "), "") != null) {
+	 if($('.nomeAnime').html().match(new RegExp(" Dublado "), "") != null) {
       videoTitle = $('.nomeAnime').html().replace(new RegExp(" Dublado"), "")
       videoAuthor = $('.epEpisodio').html()
     } 
